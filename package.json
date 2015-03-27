@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Defra/bps-fasttrack-application.git"
+    "url": "https://github.com/trevorsaint/bps-fasttrack-application.git"
   },
   "scripts": {
     "start": "node app.js"
