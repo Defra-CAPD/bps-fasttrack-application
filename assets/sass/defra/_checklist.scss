@@ -1,0 +1,67 @@
+// Checklist
+// ==========================================================================
+
+
+%checklist {
+	clear: both;
+	margin: em(19) 0;
+	padding-left: em(30);
+	position: relative;
+
+	&:before {
+
+  	background: url('/assets/images/icons/checklist.png');
+  	background-position: 50% 0;
+  	content: '';
+  	height: 25px;
+  	position: absolute;
+  	left: 0; top: 0;
+  	width: 25px;
+
+    @include device-pixel-ratio() {
+      background: url('/assets/images/icons/checklist-2x.png');
+      @include background-size(25px);
+    }
+
+	}
+
+	ul {
+  	margin-top: em(5);
+  	margin-bottom: em(20);
+	}
+
+}
+
+
+// cross icon
+.checklist-notmet {
+	@extend %checklist;
+
+	&:before {
+	  background-position: 50% 0
+	}
+
+}
+
+
+// question mark icon
+.checklist-inprogress {
+	@extend %checklist;
+
+	&:before {
+	  background-position: 50% -25px;
+	}
+
+}
+
+
+// tick icon
+.checklist-done {
+	@extend %checklist;
+
+	&:before {
+	  background-position: 50% -50px;
+	}
+
+}
+

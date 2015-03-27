@@ -1,0 +1,32 @@
+{{#if prismScript}}
+<script src="/assets/javascripts/vendor/prism.js"></script>
+{{/if}}
+
+<script src="/assets/govuk/javascripts/govuk-template.js"></script>
+<script src="/assets/javascripts/vendor/jquery-1.11.0.js"></script>
+<script src="/assets/javascripts/vendor/jquery.trap.js"></script>
+<script src="/assets/javascripts/vendor/jquery.table.js"></script>
+
+<!-- govuk frontend toolkit js -->
+<script src="/assets/govuk/javascripts/vendor/polyfills/bind.js"></script>
+<script src="/assets/govuk/javascripts/govuk/selection-buttons.js"></script>
+
+<!-- govuk elements js -->
+<script src="/assets/javascripts/vendor/details.polyfill.js"></script>
+<script src="/assets/javascripts/vendor/jquery.tabs.js"></script>
+
+<!-- custom js -->
+{{#unless angularScripts}}
+<script src="/assets/javascripts/main.js"></script>
+{{/unless}}
+
+{{#if openLayers}}
+<script src="/assets/javascripts/map.js"></script>
+{{/if}}
+
+{{#if landScripts}}
+<script src="/assets/javascripts/land.js"></script>
+{{/if}}
+
+<!-- grunt live reload -->
+<script src="//localhost:35729/livereload.js"></script>

@@ -1,0 +1,77 @@
+// Validation summary box
+.validation-summary {
+  border: 3px solid $error-colour;
+  padding: $gutter-half $gutter;
+  margin-bottom: $gutter;
+}
+
+.validation-summary ul {
+  margin-top: 10px;
+}
+
+.validation-summary li,
+.validation-summary p {
+  @include core-16;
+}
+
+.validation-summary p {
+  margin-top: $gutter-half;
+  margin-bottom: 5px;
+}
+
+.validation-summary a {
+  color: $error-colour;
+}
+
+.validation-summary .heading-small {
+  margin-top: $gutter-half;
+}
+
+
+
+// Validation message
+.validation-message {
+  @include core-16;
+  display: block;
+  color: $error-colour;
+}
+
+
+
+// Form validation
+
+.form {
+
+
+  .validation-summary,
+  .validation {
+  	border-left: 3px solid $error-colour;
+  }
+
+
+  .validation-summary {
+  	margin: 0 0 1em;
+  	padding: 1em;
+  }
+
+
+  .validation {
+  	margin: 0 0 .5em;
+  	padding: .75em 1em 1em;
+  }
+
+
+  .validation-list {
+    color: $error-colour;
+  	margin-top: .75em;
+  	margin-bottom: 0;
+  }
+
+
+  .validation-heading {
+  	@extend .bold-medium; // Extend from typography styles
+  }
+
+
+}
+

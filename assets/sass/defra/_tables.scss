@@ -1,0 +1,364 @@
+// ==========================================================================
+// Tables
+// ==========================================================================
+
+
+// Global properties
+
+table {
+  margin-bottom: 1.05263em * 2; // 40px
+
+
+  // Helper classes
+
+  .sbi,
+  .email {
+    @extend .text-secondary;
+    font-weight: normal;
+  }
+
+  .last {
+    padding-right: 0;
+    text-align: right;
+  }
+
+  .top {
+    vertical-align: top;
+  }
+
+  .text-normal {
+    font-weight: normal;
+  }
+
+  .action {
+    text-align: right;
+  }
+
+  .form-control {
+    @include core-16;
+    margin: -5px 0;
+    position: relative;
+    width: auto;
+  }
+
+
+  // Other helper classes
+
+  .totals {
+
+    th, td {
+      border-bottom-color: $black;
+    }
+
+  }
+
+
+  // Table tfoot
+
+  tfoot {
+    border-top: 2px solid rgb(0, 0, 0);
+  }
+
+
+}
+
+
+// Table variations
+
+.table {
+
+
+  // Table land entitlements
+
+  &-land-entitlements {
+
+    .parcel-id {
+      width: 13%;
+    }
+
+    .land-uses {
+      width: 10%;
+    }
+
+    .land-area {
+      width: 10%;
+    }
+
+    .parcel-size {
+      width: 10%;
+    }
+
+    .eligible-verified {
+      width: 15%;
+    }
+
+    .eligible-declared {
+      width: 15%;
+    }
+
+    .eligible-area {
+      width: 12%;
+    }
+
+    .edit-activated-area {
+      width: 3%;
+    }
+
+    .form-control {
+      margin: -5px -5px -5px 0;
+    }
+
+    .text-warning {
+      position: relative;
+      top: -1px;
+    }
+
+    tbody {
+
+      th,
+      td {
+        vertical-align: top;
+      }
+
+      input {
+        @include core-16($tabular-numbers: true);
+        text-align: right;
+      }
+
+    }
+
+  }
+
+
+  // Table land features
+
+  &-land-features {
+
+    tbody {
+
+      th {
+        font-weight: normal;
+      }
+
+    }
+
+    @include media(tablet) {
+
+      .text-warning {
+        float: right;
+      }
+
+    }
+
+  }
+
+
+  // Table land parcels
+
+  &-land-parcels {
+
+    tbody {
+
+      th {
+        font-weight: normal;
+      }
+
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0 20px;
+
+      &-done {
+        background-color: $button-colour;
+        color: white;
+      }
+
+    }
+
+    @include media(tablet) {
+
+      .checked {
+        text-align: right;
+      }
+
+    }
+
+  }
+
+
+  // Table land removal and summary
+
+  &-land-removal {
+
+    tbody {
+
+      th {
+        font-weight: normal;
+
+        @include media(tablet) {
+          width: 30%;
+        }
+
+      }
+
+    }
+
+    &-summary {
+
+      tbody {
+
+        th {
+
+          @include media(tablet) {
+            width: 30%;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+  // Table customer and business results
+
+  &-business-search {
+
+    tbody th,
+    tbody td {
+      vertical-align: top;
+    }
+
+  }
+
+
+  // Table summary
+
+  &-summary {
+
+    tr {
+
+      &:first-child {
+
+        th, td {
+          border-top: 1px solid $grey-2;
+        }
+
+      }
+
+    }
+
+    &-heading {
+      position: relative;
+
+      a {
+        position: absolute; right: 0; top: 5px;
+      }
+
+    }
+
+    &-title {
+      vertical-align: top;
+      width: 45%;
+    }
+
+    &-content {
+
+      ul {
+        margin: 0; // override list bullet margins
+      }
+
+    }
+
+    &-action {
+      padding-right: 0;
+      text-align: right;
+    }
+
+  }
+
+
+}
+
+
+// Table sortable
+
+.js-table-sortable {
+
+  [data-sort] {
+    @include user-select(none);
+    @extend .link;
+    cursor: pointer;
+    position: relative;
+    text-decoration: underline;
+  }
+
+  .sorting-asc,
+  .sorting-desc {
+    &:after {
+      margin-left: 4px;
+      position: absolute;
+    }
+  }
+
+  .sorting-asc {
+    &:after {
+      content: '▲';
+    }
+  }
+
+  .sorting-desc {
+    &:after {
+      content: '▼';
+    }
+  }
+
+}
+
+
+// Tables with javascript
+
+.js-enabled {
+
+
+  .table {
+
+
+    // Table Land entitlements
+
+    &-land-entitlements {
+
+      tbody {
+
+        tr {
+          display: none;
+
+          &:first-child {
+            display: table-row;
+          }
+
+        }
+
+        &.open {
+          border-top: 2px solid $black;
+          border-bottom: 2px solid $black;
+
+          tr {
+            display: table-row;
+          }
+
+        }
+
+      }
+
+    }
+
+
+  }
+
+
+}
+
