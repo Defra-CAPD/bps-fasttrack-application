@@ -17,7 +17,7 @@ module.exports = {
     // application
     app.get('/pages/application/', function(req, res, next) {
 
-      var data = {doctitle: 'Application'};
+      var data = {doctitle: "Confirm your 2015 Basic Payment Scheme application"};
       res.render('pages/application/home', data);
 
     });
@@ -25,7 +25,7 @@ module.exports = {
 
       app.get('/pages/application/confirmation/', function(req, res, next) {
 
-        var data = {doctitle: 'Confirmation'};
+        var data = {doctitle: "You’ve made your 2015 Basic Payment Scheme application"};
         res.render('pages/application/confirmation/home', data);
 
       });
@@ -33,7 +33,7 @@ module.exports = {
 
       app.get('/pages/application/submitted/', function(req, res, next) {
 
-        var data = {doctitle: 'Sbmitted'};
+        var data = {doctitle: "You've made your 2015 BPS application"};
         res.render('pages/application/submitted/home', data);
 
       });
@@ -42,7 +42,7 @@ module.exports = {
     // invalid application token
     app.get('/pages/invalid-application-token/', function(req, res, next) {
 
-      var data = {doctitle: 'Invalid Application Token'};
+      var data = {doctitle: "Invalid Token"};
       res.render('pages/invalid-application-token/home', data);
 
     });
@@ -51,7 +51,7 @@ module.exports = {
     // service unavailable
     app.get('/pages/service-unavailable/', function(req, res, next) {
 
-      var data = {doctitle: 'Service Unavailable'};
+      var data = {doctitle: "Service Unavailable"};
       res.render('pages/service-unavailable/home', data);
 
     });
