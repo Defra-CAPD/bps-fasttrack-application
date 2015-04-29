@@ -1,0 +1,11 @@
+.DS_Store
+.sass-cache
+node_modules
+.idea/
+npm-debug.log
+tmp
+javascript/bower_components/
+gems/
+npm-debug.log
+files
+target/
